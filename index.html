@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Round House Pizza - Premium handcrafted burgers with premium ingredients and urban vibes.">
+  <meta name="theme-color" content="#000000">
+  <title>Round House Pizza | Premium Handcrafted Burgers</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">
+        <img src="public/crispy-chicken-burger.png" alt="Round House Pizza Logo" class="logo-img">
+        <span class="logo-text">Round House Pizza</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="nav-links-desktop">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button class="book-table-btn" id="bookTableBtn">Book a Table</button>
+      </div>
+
+      <!-- Desktop Socials -->
+      <div class="nav-socials-desktop">
+        <a href="https://maps.app.goo.gl/MhZaaLVh7fDNzGkx6" target="_blank" class="social-icon facebook-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="https://maps.app.goo.gl/MhZaaLVh7fDNzGkx6" target="_blank" class="social-icon instagram-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m0 2.16c5.413 0 9.84 4.427 9.84 9.84S17.413 21.84 12 21.84 2.16 17.413 2.16 12 6.587 2.16 12 2.16m0 1.62c-4.54 0-8.22 3.68-8.22 8.22s3.68 8.22 8.22 8.22 8.22-3.68 8.22-8.22-3.68-8.22-8.22-8.22m0 13.32c-2.814 0-5.1-2.286-5.1-5.1s2.286-5.1 5.1-5.1 5.1 2.286 5.1 5.1-2.286 5.1-5.1 5.1m6.48-13.32c-.648 0-1.176.528-1.176 1.176s.528 1.176 1.176 1.176 1.176-.528 1.176-1.176-.528-1.176-1.176-1.176z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Cart Button -->
+      <button class="cart-btn" id="cartBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="close-icon" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+      <a href="#home" class="mobile-nav-link" data-target="home">Home</a>
+      <a href="#menu" class="mobile-nav-link" data-target="menu">Menu</a>
+      <a href="#about" class="mobile-nav-link" data-target="about">About</a>
+      <a href="#contact" class="mobile-nav-link" data-target="contact">Contact</a>
+      <button class="mobile-book-table-btn" id="mobileBookTableBtn">Book a Table</button>
+      <div class="mobile-nav-socials">
+        <a href="https://maps.app.goo.gl/MhZaaLVh7fDNzGkx6" target="_blank" class="social-icon facebook-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="https://maps.app.goo.gl/MhZaaLVh7fDNzGkx6" target="_blank" class="social-icon instagram-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m0 2.16c5.413 0 9.84 4.427 9.84 9.84S17.413 21.84 12 21.84 2.16 17.413 2.16 12 6.587 2.16 12 2.16m0 1.62c-4.54 0-8.22 3.68-8.22 8.22s3.68 8.22 8.22 8.22 8.22-3.68 8.22-8.22-3.68-8.22-8.22-8.22m0 13.32c-2.814 0-5.1-2.286-5.1-5.1s2.286-5.1 5.1-5.1 5.1 2.286 5.1 5.1-2.286 5.1-5.1 5.1m6.48-13.32c-.648 0-1.176.528-1.176 1.176s.528 1.176 1.176 1.176 1.176-.528 1.176-1.176-.528-1.176-1.176-1.176z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-content">
+      <div class="cart-header">
+        <h2>Your Order</h2>
+        <button class="cart-close-btn" id="cartCloseBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty">Your cart is empty</div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Grand Total</span>
+          <span class="total-price" id="totalPrice">Rs. 0</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn" disabled>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"></circle>
+            <path d="M6.63 15.038a4.5 4.5 0 0 1 7.665 4.282"></path>
+            <path d="M9 17A6 6 0 0 0 3 3"></path>
+          </svg>
+          Order via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=2000&auto=format&fit=crop" alt="Hero Background" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">Now Serving Islamabad</div>
+      <h1 class="hero-title">
+        <span>Handcrafted</span>
+        <span>Burgers</span>
+      </h1>
+      <p class="hero-subtitle">Premium Ingredients • Urban Vibes • Legendary Taste</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Order Now</button>
+        <button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Visit Us</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+    <div class="menu-container">
+      <div class="menu-header">
+        <h2>Round House Pizza Menu</h2>
+        <p>Fuel your cravings with our elite selection</p>
+      </div>
+
+      <div class="menu-categories" id="menuCategories">
+        <!-- Categories will be inserted here by JavaScript -->
+      </div>
+
+      <div class="menu-items-grid" id="menuItemsGrid">
+        <!-- Menu items will be inserted here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section id="about" class="story">
+    <div class="story-container">
+      <div class="story-text">
+        <h2>Our Story</h2>
+        <div class="story-content">
+          <p>Born from a passion for the perfect patty, Round House Pizza started with a simple mission: to redefine the pizza and burger experience in Gujranwala.</p>
+          <p>We don't just flip burgers; we engineer flavor profiles. Every sauce is signature, every bun is perfectly toasted, and every bite is a testament to our commitment to gourmet excellence.</p>
+          <div class="story-stats">
+            <div>
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Fresh Meat</span>
+            </div>
+            <div>
+              <span class="stat-value">Urban</span>
+              <span class="stat-label">Environment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1965&auto=format&fit=crop" alt="Burger Craft">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Our Location</h2>
+        <p>Located in the heart of Islamabad, Round House Pizza is where urban street food meets gourmet excellence. We believe in bold flavors, messy burgers, and unforgettable experiences.</p>
+        <div class="contact-socials">
+          <a href="https://maps.app.goo.gl/MhZaaLVh7fDNzGkx6" target="_blank" class="social-btn facebook-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://maps.app.goo.gl/MhZaaLVh7fDNzGkx6" target="_blank" class="social-btn instagram-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m0 2.16c5.413 0 9.84 4.427 9.84 9.84S17.413 21.84 12 21.84 2.16 17.413 2.16 12 6.587 2.16 12 2.16m0 1.62c-4.54 0-8.22 3.68-8.22 8.22s3.68 8.22 8.22 8.22 8.22-3.68 8.22-8.22-3.68-8.22-8.22-8.22m0 13.32c-2.814 0-5.1-2.286-5.1-5.1s2.286-5.1 5.1-5.1 5.1 2.286 5.1 5.1-2.286 5.1-5.1 5.1m6.48-13.32c-.648 0-1.176.528-1.176 1.176s.528 1.176 1.176 1.176 1.176-.528 1.176-1.176-.528-1.176-1.176-1.176z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="branches-grid" id="branchesGrid">
+        <!-- Branches will be inserted here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Round House Pizza Islamabad. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <!-- Reservation Modal -->
+  <div class="reservation-modal" id="reservationModal">
+    <div class="reservation-overlay" id="reservationOverlay"></div>
+    <div class="reservation-content">
+      <div class="reservation-header">
+        <h2>Book a Table</h2>
+        <button class="reservation-close-btn" id="reservationCloseBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <form class="reservation-form" id="reservationForm">
+        <div class="form-group">
+          <label for="resName">Full Name</label>
+          <input type="text" id="resName" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="resPhone">Phone Number</label>
+          <input type="tel" id="resPhone" name="phone" required placeholder="Your phone number">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resPersons">Number of Persons</label>
+            <input type="number" id="resPersons" name="persons" min="1" max="20" required placeholder="2">
+          </div>
+          <div class="form-group">
+            <label for="resDate">Date</label>
+            <input type="date" id="resDate" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="resTime">Time</label>
+            <input type="time" id="resTime" name="time" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="resMessage">Message (Optional)</label>
+          <textarea id="resMessage" name="message" rows="3" placeholder="Any special requests?"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
